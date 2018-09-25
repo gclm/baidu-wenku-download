@@ -29,7 +29,14 @@ public class FileOutputTest {
         list.add("https://wkretype.bdimg.com/retype/zoom/24b84244804d2b160b4ec0a9?pn=2&o=jpg_6&md5sum=d8a53520a3894717412042059122e8cc&sign=5d61f204f0&png=59495-88543&jpg=62872-221176");
         list.add("https://wkretype.bdimg.com/retype/zoom/24b84244804d2b160b4ec0a9?pn=3&o=jpg_6&md5sum=d8a53520a3894717412042059122e8cc&sign=5d61f204f0&png=88544-129160&jpg=221177-393701");
 
-        new FileOutput().imgToPdf("/Volumes/Workspace/pdf/tes.pdf",list);
+        new FileOutput().imgToPdf("./tes.pdf",list);
+    }
+
+    @Test
+    public void downloadWordTest(){
+        ResultMsg resultMsg = new FileOutput().downloadWord("./ASD.docx", "http://47.95.226.123/getDoc.do?docUrl=https://wenku.baidu.com/view/6cc5512808a1284ac9504304.html?from=search");
+
+        System.out.println(resultMsg);
     }
 
 }

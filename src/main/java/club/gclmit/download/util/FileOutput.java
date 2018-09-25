@@ -1,5 +1,6 @@
 package club.gclmit.download.util;
 
+import club.gclmit.download.enums.ResultEnum;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Rectangle;
@@ -26,13 +27,14 @@ import java.util.List;
 @Slf4j
 public class FileOutput {
 
+    private ResultMsg resultMsg = null;
 
     /**
      * 把 Txt文件写入文本
      * @param txtPath
      * @param texts
      */
-    public void txtWriteFile(String txtPath,List<String> texts){
+    public ResultMsg txtWriteFile(String txtPath,List<String> texts){
 
         long time = System.currentTimeMillis();
         try {
@@ -54,10 +56,12 @@ public class FileOutput {
 
         } catch (IOException e) {
             log.error("\nTxt文件"+txtPath+"写入失败");
-            e.printStackTrace();
+            return  new ResultMsg(ResultEnum.NnDownload);
         }
 
         log.info("\n写入Txt文件"+txtPath+"花费了"+(int) (System.currentTimeMillis() - time)+"时间");
+
+        return new ResultMsg(ResultEnum.Download);
     }
 
 
@@ -78,7 +82,7 @@ public class FileOutput {
      * @param pdfPath
      * @param imgs
      */
-    public void imgToPdf(String pdfPath, List<String> imgs){
+    public ResultMsg imgToPdf(String pdfPath, List<String> imgs){
 //      获取当前系统时间 毫秒级
         long time = System.currentTimeMillis();
         try {
@@ -120,10 +124,11 @@ public class FileOutput {
 
         } catch (Exception e) {
             log.error("\nPDF文件"+pdfPath+"转换失败");
-            e.printStackTrace();
+            return new ResultMsg(ResultEnum.NnDownload);
         }
 
         log.info("\nPDF文件"+pdfPath+"转换图片花费了"+(int) (System.currentTimeMillis() - time)+"时间");
+        return new ResultMsg(ResultEnum.Download);
     }
 
 
@@ -132,7 +137,7 @@ public class FileOutput {
      * @param filePath 文件路径
      * @param url 文件下载链接
      */
-    public void downloadWord(String filePath,String url){
+    public ResultMsg downloadWord(String filePath,String url){
 //      获取当前系统时间 毫秒级
         long time = System.currentTimeMillis();
 
@@ -174,11 +179,13 @@ public class FileOutput {
             bufferedInputStream.close();
 
         } catch (Exception e) {
-            log.error("\n文件"+filePath+"下载失败");
             e.printStackTrace();
+            log.error("\n文件"+filePath+"下载失败");
+            return new ResultMsg(ResultEnum.NnDownload);
         }
 
         log.info("\n文件"+filePath+"下载花费了"+(int) (System.currentTimeMillis() - time)+"时间");
+        return new ResultMsg(ResultEnum.Download);
     }
 
 }

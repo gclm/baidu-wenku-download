@@ -3,6 +3,7 @@ package club.gclmit.download.service;
 import club.gclmit.download.config.BaiduWenkuApiConfigTest;
 import club.gclmit.download.entity.Doc;
 import club.gclmit.download.mapper.DocMapper;
+import club.gclmit.download.util.ResultMsg;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,7 +35,7 @@ public class DocServiceTest {
     @Test
    public void findDocTest(){
 
-        String docUrl = docService.findDoc(WordUrl);
+        ResultMsg docUrl = docService.findDoc("https://wenku.baidu.com/view/23870a4e2e3f5727a5e962b6.html?from=search");
 
         System.out.println("文件链接："+docUrl);
     }

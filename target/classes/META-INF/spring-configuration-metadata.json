@@ -1,0 +1,53 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "club.gclmit.download.entity.BaiduWenku",
+      "name": "gclm.download.baidu.wenku",
+      "type": "club.gclmit.download.entity.BaiduWenku"
+    },
+    {
+      "sourceType": "club.gclmit.download.config.DruidConfig",
+      "name": "spring.datasource",
+      "sourceMethod": "Druid()",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "club.gclmit.download.entity.BaiduWenku",
+      "name": "gclm.download.baidu.wenku.doc",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "club.gclmit.download.entity.BaiduWenku",
+      "name": "gclm.download.baidu.wenku.doc-download-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "club.gclmit.download.entity.BaiduWenku",
+      "name": "gclm.download.baidu.wenku.doc-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "club.gclmit.download.entity.BaiduWenku",
+      "name": "gclm.download.baidu.wenku.pdf",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "club.gclmit.download.entity.BaiduWenku",
+      "name": "gclm.download.baidu.wenku.ppt",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "club.gclmit.download.entity.BaiduWenku",
+      "name": "gclm.download.baidu.wenku.txt",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "club.gclmit.download.entity.BaiduWenku",
+      "name": "gclm.download.baidu.wenku.word",
+      "type": "java.lang.String"
+    }
+  ]
+}

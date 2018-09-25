@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>孤城落寞文库_专注于大数据免费资源下载</title>
+
+		<meta name="Keywords" content="文库免费下载,baidu文库,百度文库,孤城落寞文库,baidu文库免费,免费wenku,免费文库" />
+
+		<link rel="stylesheet" type="text/css" href="public/data/css/main.css" th:href="@{../data/css/main.css}">
+		<link rel="stylesheet" type="text/css" href="public/data/css/index.css" th:href="@{../data/css/index.css}">
+		<script type="text/javascript" src="public/js/jquery-1.7.1.js" th:src="@{../js/jquery-1.7.1.js}"></script>
+		<script type="text/javascript" src="public/layer/layer.js" th:src="@{../layer/layer.js}"></script>
+		<script type="text/javascript" src="public/data/js/jquery-3.2.1.min.js" th:src="@{../data/js/jquery-3.2.1.min.js}"></script>
+		<script type="text/javascript" th:src="@{../js/download.js}"></script>
+
+	</head>
+	<body>
+
+		<header class="cf">
+			<div class="logo fl"></div>
+			<div class="list-wrapper fr">
+				<ul class="list fl cf" style='width:700px;'>
+					<li class="active"><a href="#">百度文库下载</a></li>
+					<li><a href="#">新闻</a></li>
+					<li><a href="#">素材下载</a></li>
+					<li><a href="#"  class="jindian">博客</a></li>
+					<li><a href="#">豆丁</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<content>
+			<div class="title">1111</div>
+			<div class="file-box cf">
+				<input class="file fl" id="address" value="" placeholder="请输入文库下载地址">
+				<input id="file" type="file" accept="text/plain" style="display: none;">
+				<button onClick="file_download_btn()" class="fileBtn fl">下载</button>
+				<p class="tip f2">
+					注:仅支持<span style="font-weight: bold;color: #98abcf">下载卷或会员</span>格式的<span style="font-weight: bold;color: #98abcf">Word,PPT,Text</span>文件<br/><br/>
+				</p><br>
+			</div>
+			<div style="text-align:center; font-size: 18px;color: chartreuse;margin-top: 30px;line-height: 50px;">
+				<p style="font-size: 24px;color: #e42424;">孤城落寞文库解析正式上线！使用流程如下：</p>
+				第一步: 把文档链接粘贴到文档链接框，并单击“下载”按钮 <br/>
+				第二步: 等待一会儿，文件就被您下载了。
+				</p>
+			</div>
+		</content>
+		<footer style="text-align: center">
+			<p>copyright ©
+				<script>
+					document.write(new Date().getFullYear())
+				</script>
+
+				<a href="#">孤城落寞文库</a>
+				<a class="city">苏公网安备 32031102000137号  苏ICP备14036222号</a>
+				<a href="#">联系本站</a>
+				<a href="#">侵权与不良资源举报</a>
+			</p>
+		</footer>
+
+
+		<script th:inline="javascript">
+            /*<![CDATA[*/
+            var context = /*[[${#httpServletRequest.getScheme() + '://' + #httpServletRequest.getServerName() + ':' + #request.getServerPort()  + #request.getContextPath()}]]*/;
+            /*]]>*/
+		</script>
+
+	</body>
+</html>
+
+

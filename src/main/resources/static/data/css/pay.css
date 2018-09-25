@@ -1,0 +1,321 @@
+
+.font36{
+    font-size:36px;
+    font-weight:bold;
+}
+header .logo{
+    background:url('../image/logo.png.html') no-repeat center center;
+}
+header .list-wrapper ul.list li span{
+    color:#59607c;
+}
+
+
+.order-wrapper{
+    padding:129px 0 178px;
+    background-color:#fff;
+    text-align: center;
+}
+.order-wrapper .img-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 26px;
+    background:url('../image/success_icon.png.html') no-repeat center center;
+}
+.order-wrapper p{
+    margin-bottom:28px;
+    font-size:16px;
+    color:#4992ff;
+}
+.order-wrapper ul{
+    width:250px;
+    margin:0 auto;
+}
+.order-wrapper ul li {
+    height:32px;
+    line-height:32px;
+}
+.order-wrapper ul li span{
+    float:left;
+}
+.order-wrapper ul li span:nth-child(1){
+    margin-right:27px;
+    color:#999;
+}
+.order-wrapper ul li span:nth-child(2){
+    color:#666;
+}
+.order-wrapper .buttons{
+    margin: 40px auto 0;
+    width:318px;
+}
+.order-wrapper .buttons a{
+    width:142px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    border-radius:2px;
+}
+.order-wrapper .buttons a.go-test{
+    margin-right:34px;
+    background-color:#4992ff;
+}
+.order-wrapper .buttons a.check-order{
+    border:1px solid #4992ff;
+    color:#4992ff;
+}
+
+.content .order-box{
+    margin-bottom: 24px;
+    padding: 27px 30px 47px;
+    background-color:#fff;
+}
+.content .order-box:nth-child(2){
+    margin-bottom:0;
+}
+.content .order-box h3{
+    padding-left: 7px;
+    height: 12px;
+    line-height: 12px;
+    border-left: 4px solid #2ebed4;
+    color:#222;
+}
+.content .order-box ul{
+    width:1092px;
+    margin: 0 auto;
+    padding-top: 29px;
+    padding-bottom:29px;
+}
+.content .order-box ul li{
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    padding-top:77px;
+    width:344px;
+    height:199px;
+    border: 1px solid #e7e7e7;
+    cursor: pointer;
+    text-align:center;
+}
+.content .order-box ul li:nth-child(3) {
+    margin-right:0;
+}
+.content .order-box ul li .package{
+    position: absolute;
+    top:22px;
+    left:50%;
+    margin-left:-31px;
+    width: 68px;
+    height:32px;
+    line-height:16px;
+    border-bottom: 3px solid #4b92ff;
+    font-size:16px;
+    color:#666;
+}
+.content .order-box ul li .info{
+    margin-bottom:22px;
+    height:42px;
+    vertical-align: bottom;
+    font-size:16px;
+}
+.content .order-box ul li .charge span.tag{
+    margin-right:10px;
+    padding-left:20px;
+    background:url("../image/tag.png.html") no-repeat left center;
+}
+.content .order-box ul li .choose{
+    display: none;
+    position: absolute;
+    bottom:-1px;
+    right:-1px;
+    width:39px;
+    height:39px;
+    background:url("../image/choose.png.html") no-repeat center center;
+}
+.content .order-box ul li.active{
+    border-color:#f3bb02;
+}
+.content .order-box ul li.active .choose{
+    display: block;
+}
+.content .order-box ul li.active .package{
+    border-color:#f3bb02;
+}
+.content .custom{
+    position: relative;
+    margin:21px 0 0 26px;
+    width:411px;
+    height:40px;
+}
+.content .custom input{
+    padding-left:10px;
+    width:312px;
+    height:40px;
+    border:1px solid #e5e5e5;
+    border-radius: 1px;
+    color:#222;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.content .custom input:focus{
+    border-color:#4992ff;
+}
+.content .custom button{
+    position: absolute;
+    right:0;
+    top:0;
+    width:100px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    background-color:#4992ff;
+}
+.content .custom .tips{
+    position: absolute;
+    left:420px;
+    top:12px;
+    width:300px;
+    color:#999;
+}
+
+.content .order-box .paymoney{
+    margin-top:30px;
+    height:50px;
+    line-height:46px;
+    text-align: center;
+    border: 1px dashed #e5e5e5;
+    color:#989898;
+}
+.content .order-box .paymoney span{
+    color:#f34653;
+    font-size:22px;
+}
+
+.content .order-box .ways {
+    display: none;
+    margin:0 auto;
+    padding-top:41px;
+    width:482px;
+}
+
+.content .order-box .ways .pay{
+    float:left;
+    width:172px;
+    height:217px;
+}
+.content .order-box .ways .pay:nth-child(1) {
+    margin-right:138px;
+}
+.content .order-box .ways .pay div{
+    width:172px;
+    height:172px;
+    border-radius: 1px;
+}
+
+
+.content .order-box .ways .wxpay div{
+    border:1px solid #41b035;
+    background:url('../image/alipay.png.html') no-repeat center center;
+}
+.content .order-box .ways .wxpay p{
+    margin-top:11px;
+    padding-left:69px;
+    width:172px;
+    height:34px;
+    line-height:34px;
+    background:url('../image/wxpay.png.html') no-repeat 29px center;
+    font-size:18px;
+    color:#222;
+}
+.content .order-box .ways .alipay div{
+    /*border:1px solid #4992ff;*/
+    /*background:url('../image/alipay.png.html') no-repeat center center;*/
+}
+
+
+
+.content .order-box .ways .alipay button{
+    margin-top:11px;
+    width:172px;
+    height:34px;
+    line-height:34px;
+    text-align: center;
+    background-color:#4992ff;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+#qrcode{
+    /*display: none;*/
+    /*width:172px;*/
+    /*height:172px;*/
+    /*border-radius: 1px;*/
+    /*border:1px solid #4992ff;*/
+}
+.content .order-box .tip{
+    margin-top:57px;
+    padding-top:22px;
+    color:#999;
+    text-align:center;
+    border-top:1px solid #e5e5e5;
+}
+.confirm-wrapper{
+    margin:50px auto;
+    text-align: center;
+}
+#confirm{
+    color:#333;
+}
+
+
+.content .order-box .tabs{
+    border-bottom: 1px solid #dcdcdc;
+    height: 90px;
+    width: 105%;
+    margin-left: -2.5%;
+    margin-top: 20px;
+
+}
+.content .order-box .tabs span:first-child{
+    /*width: 10%;*/
+}
+.content .order-box .tabs span{
+    height: 33px;
+    margin-right: 20px;
+    line-height: 25px;
+    display: inline-block;
+    margin-top: 7px;
+    color: #666;
+    text-align: center;
+    padding-top: 3px;
+    margin-left: -4px;
+}
+.content .order-box .tabs span:first-child{
+    margin-left: 4.4%;
+}
+.content .order-box .tabs .active{
+    color: #4B92FF;
+/*    font-size: 14px;*/
+     font-weight: bold;
+     cursor: pointer;
+    border-bottom:2px solid #4B92FF;
+    
+}
+
+.content .order-box .cf_ul{
+    display: none;
+}
+.content .recharge-wrapper .df{
+    display: block;
+}
+
+#active_1{
+    display: none;
+}
+
+.content .apiCon {
+    display: none;
+}

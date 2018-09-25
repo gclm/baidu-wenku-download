@@ -1,6 +1,7 @@
 package club.gclmit.download.service;
 
 import club.gclmit.download.entity.Doc;
+import club.gclmit.download.util.ResultMsg;
 import com.baomidou.mybatisplus.extension.service.IService;
 import java.util.Map;
 
@@ -15,8 +16,11 @@ import java.util.Map;
 public interface DocService extends IService<Doc> {
 
 
-    String findDoc(String url);
+    ResultMsg findDoc(String url);
 
 
-    String downloadDoc(String doc_id,Map<String, String> docInfo);
+    ResultMsg downloadDoc(String doc_id,Map<String, String> docInfo);
+
+
+    String pretreatmentURL(String url);
 }

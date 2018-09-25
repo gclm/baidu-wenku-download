@@ -29,6 +29,6 @@ public class BaiduWenku {
     private String doc;
     @Getter @Setter
     private String docPath;
-
-
+    @Getter @Setter
+    private String docDownloadPath;
 }

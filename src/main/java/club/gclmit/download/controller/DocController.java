@@ -1,7 +1,10 @@
 package club.gclmit.download.controller;
 
 
+import club.gclmit.download.enums.ResultEnum;
 import club.gclmit.download.service.DocService;
+import club.gclmit.download.util.ResultMsg;
+import club.gclmit.download.util.UrlUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -9,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -31,6 +36,10 @@ public class DocController {
     @Autowired
     private DocService docService;
 
+    /**
+     * seach 搜索下载链接
+     * @return
+     */
     @GetMapping("/search")
     public ModelAndView index(){
         return new ModelAndView("/index");
@@ -42,20 +51,31 @@ public class DocController {
     }
 
 
-    @PostMapping("/search")
-    public void  getAnalysisUrl(@RequestParam(value ="url") String url){
-        System.out.println("url"+url);
-        String pattern = "/^https?:\\/\\/(([a-zA-Z0-9_-])+(\\.)?)*(:\\d+)?(\\/((\\.)?(\\?)?=?&?[a-zA-Z0-9_-](\\?)?)*)*$/i";
-        boolean matches = Pattern.matches(pattern, url);
+    /**
+     * 流程：
+     * 字符串预处理 -> 执行文件解析
+     *                      -> 解析成功 -> 开始下载 -> 生成下载链接
+     *                      -> 解析失败
+     * @param url
+     * @return
+     */
+    @ResponseBody
+    @PostMapping(value = "/search")
+    public ResultMsg getAnalysisUrl(@Valid String url){
 
+        url = docService.pretreatmentURL(url);
 
-        if(matches){
-            String doc = docService.findDoc(url);
+        ResultMsg resultMsg = null;
+
+        if (url.indexOf("wenku.baidu.com/view/") != -1){
+            resultMsg = new ResultMsg(ResultEnum.Resolve, docService.findDoc(url).getData());
+            log.info("\n解析成功 resultMsg:"+resultMsg);
+        }else{
+            log.info("\n解析失败");
+            resultMsg = new ResultMsg(ResultEnum.UnResolve);
         }
-        System.out.println(matches);
-
+        System.out.println(resultMsg);
+        return  resultMsg;
     }
-
-//    public String getOriginalUrl(String )
 }
 

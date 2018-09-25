@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+body {
+	background-color:#B8FFBA;
+	text-align:center
+}
+.font00{font-size:36px; font-weight:bolder;
+font-family:"微软雅黑";
+color:#FC070B
+}
+.font01{font-size:42px; font-weight:bolder;
+font-family:"微软雅黑";
+color:#FC070B
+}
+.font02{font-size:16px; font-weight:bolder;
+font-family:"微软雅黑";
+color:#FC070B
+}

@@ -52,7 +52,7 @@ public class BaiduWenkuApi {
      */
     public List<String> getPpt(String doc_id) {
 
-        log.info("下载文件为 PPT,文档下载路径：" + String.format(baiduWenku.getPpt(), doc_id));
+        log.info("\n下载文件为 PPT,文档下载路径：" + String.format(baiduWenku.getPpt(), doc_id));
 
         httpClient = new HttpClient();
         list = new ArrayList<>();
@@ -202,19 +202,29 @@ public class BaiduWenkuApi {
      * @return
      */
     public  String  getDoc_id(String url){
-        url = url.substring(url.indexOf("view/") + 5, url.indexOf(".html"));
+        url = url.substring(url.indexOf("view/")+5, url.indexOf(".html"));
         log.info("\ndoc_id:" + url);
         return  url;
     }
 
 
     /**
-     * 根据文件 文件名和文件类型 生成文件路径
+     * 根据文件 文件名和文件类型生成文件路径
      * @param docTitle  文件名
      * @param docType   文件类型
      * @return
      */
     public String getDocPath(String docTitle,String docType){
         return  String.format(baiduWenku.getDocPath(),docType,docTitle,docType);
+    }
+
+    /**
+     * 根据文件 文件名和文件类型生成文件下载路径
+     * @param docTitle  文件名
+     * @param docType   文件类型
+     * @return
+     */
+    public String getDocDownloadPath(String docTitle,String docType){
+        return String.format(baiduWenku.getDocDownloadPath(),docType,docTitle,docType);
     }
 }

@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* 公共属性 */
+*{margin:0;padding:0;list-style:none;}
+body{background:#fff;font:normal 12px/22px "Microsoft Yahei";}
+img{border:0;}
+a{text-decoration:none;color:#333;}
+a:hover{color:#1974A1;}
+.clearfix:after,.clearfix:before{display:table;line-height:0;content:""}
+.clearfix:after{clear:both}
+
+/* 主要样式 */
+.container{width:1180px;margin-right:auto;margin-left:auto;*zoom:1}
+
+.products{background:#333 url("../images/product-search.png") center top no-repeat;background-size:1920px 322px;height:162px;padding:80px 0;text-align:center;}
+.products h3{font-size:30px;line-height:52px;color:#FFF;font-weight:400;}
+.products p{font-size:14px;line-height:30px;color:#999;}
+.products .search{margin-top:30px}
+.products .search input{width:700px;height:20px;font-size:14px;line-height:20px;color:#333;padding:15px 20px;appearance:none;-moz-appearance:none;-webkit-appearance:none;border:none;outline:none}
+.products .search .search-btn{display:inline-block;margin-left:-6px;cursor:pointer;color:#FFF;background-color:#108CEE;width:115px;height:50px;font-size:14px;line-height:50px}
+.products .search .search-btn:hover{text-decoration:none}
+
+.products #company::-webkit-input-placeholder{color:rgba(51,51,51,0.3)}
+.products #company:-moz-placeholder{color:rgba(51,51,51,0.3)}
+.products #company:-ms-input-placeholder{color:rgba(51,51,51,0.3)}
+
+.products .tips{color:#FFF;margin-top:20px;display:none;text-align:left;padding-left:164px}
+.products .tips.show{display:block}
